@@ -1,0 +1,59 @@
+.dr {
+  width: 100%;
+  height: 48px;
+  font-size: 14px;
+  @apply relative;
+}
+
+.ul {
+  z-index: 13;
+  top: 100%;
+  max-height: 400px;
+  background: #05173A;
+  padding-top: 16px;
+  box-shadow: 8px 16px 8px rgba(0, 0, 0, 0.24);
+  @apply absolute overflow-auto w-full;
+}
+
+.text {
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  border-radius: 8px;
+  font-style: normal;
+  height: 48px;
+  @apply flex items-center p-3;
+}
+.ul::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+.ul::-webkit-scrollbar-track {
+  background: #f4f5f7;
+  /* box-shadow: inset 0 0 5px rgb(31, 18, 211);
+  border-radius: 2px; */
+}
+
+/* Handle */
+.ul::-webkit-scrollbar-thumb {
+  background: #c1c7d0;
+  border-radius: 8px;
+}
+
+.text_dropdown {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.6);
+  padding-left: 15px;
+}
+.li_item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-left: 66px;
+  @apply flex items-center justify-start py-[7px];
+}
+.active {
+  background: rgba(255, 255, 255, 0.08);
+}

@@ -1,0 +1,11 @@
+#container {
+  position: relative;
+  display: block;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  padding: 0px;
+  border: 0px;
+}

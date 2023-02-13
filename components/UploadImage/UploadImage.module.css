@@ -1,0 +1,31 @@
+.cover {
+  position: relative;
+  height: 80px;
+}
+.loader {
+  position: absolute;
+  top: 30px;
+  left: 34%;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #3498db;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+  z-index: 80;
+}
+.edit {
+  position: absolute;
+  top: 65px;
+  left: 34%;
+  z-index: 1;
+  cursor: pointer;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
