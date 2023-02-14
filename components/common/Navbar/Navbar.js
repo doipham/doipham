@@ -4,7 +4,7 @@ import { useRouter } from "next/router"
 import { Search } from "components/ui"
 import cn from "classnames"
 import s from "./Navbar.module.css"
-import { useEffect, useRef, useState } from "react"
+import { Fragment, useEffect, useRef, useState } from "react"
 import Image from "next/legacy/image"
 
 const Profile = dynamic(() => import("components/common/Profile"), { ssr: false })
@@ -15,12 +15,16 @@ const listMenus = [
     path: "/"
   },
   {
-    title: "Livescore",
-    path: "/livescore"
+    title: "Sản phẩm",
+    path: "/product"
   },
   {
-    title: "E-Sports",
-    path: `/category?id=${id}`
+    title: "Blog",
+    path: `/blog`
+  },
+  {
+    title: "Giới thiệu",
+    path: `/sub`
   }
 ]
 
@@ -67,10 +71,10 @@ export default function Navbar() {
       {isMobile === false && (
         <nav
           className={
-            "px-12 2xl:px-16 top-0 text-dark-700 w-full fixed z-40 border-b border-dark-100 h-20 outline-none flex items-center"
+            "fixed w-full top-0 z-50 border-b border-b-black border-opacity-10 bg-white backdrop-blur-lg dark:border-b-transparent dark:bg-dark-1 dark:bg-opacity-80"
           }
         >
-          <div className="container__screen m-auto flex w-full justify-between items-center">
+          <div className=" m-auto flex w-full justify-between items-center md:max-w-screen-xl">
             <div className="flex relative items-center">
               <Link href="/">
                 <div className="py-1 flex" style={{ minWidth: 141 }}>
@@ -81,18 +85,62 @@ export default function Navbar() {
                       src="https://dayve.vn/wp-content/uploads/2022/04/cach-ve-hoa-dam-but-buoc-7.png"
                       alt="xx"
                     />
-                    <div className="text-2xl">DNT</div>
+                    <div className="text-2xl font-medium">DNT</div>
                   </div>
                 </div>
               </Link>
             </div>
-            <div className="flex space-x-4 justify-center items-center">
-              <div>Sản phẩm</div>
-              <div>Bộ sưu tập</div>
-              <div>Sản phẩm</div>
-              <div>Sản phẩm</div>
-              <div>Sản phẩm</div>
-              <Profile />
+            <div className="flex space-x-6 justify-center items-center">
+              {listMenus.map(({ title, path }, key) => {
+                return (
+                  <Fragment key={key}>
+                    <Link href={path} key={key}>
+                      <div
+                        className={cn("px-2 h-[54px] flex items-center text-dark-700 border--hover--header", {
+                          [s.active]: index === path
+                        })}
+                      >
+                        {title}
+                      </div>
+                    </Link>
+                  </Fragment>
+                )
+              })}
+            </div>
+            <div className="flex space-x-3 justify-center items-center">
+              <div>
+                <Image
+                  width={20}
+                  height={20}
+                  src="https://theme.hstatic.net/200000531407/1000893680/14/searcg-icon.svg?v=155"
+                  alt="xx"
+                />
+              </div>
+              <div>
+                <Image
+                  width={20}
+                  height={20}
+                  src="https://theme.hstatic.net/200000531407/1000893680/14/user-account.svg?v=155"
+                  alt="xx"
+                />
+              </div>
+              <div>
+                <Image
+                  width={20}
+                  height={20}
+                  src="https://theme.hstatic.net/200000531407/1000893680/14/heart.svg?v=155"
+                  alt="xx"
+                />
+              </div>
+              <div>
+                <Image
+                  width={20}
+                  height={20}
+                  src="https://theme.hstatic.net/200000531407/1000893680/14/shopping-cart.svg?v=155"
+                  alt="xx"
+                />
+              </div>
+              {/* <Profile /> */}
             </div>
           </div>
         </nav>

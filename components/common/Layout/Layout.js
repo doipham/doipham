@@ -7,7 +7,7 @@ export default function Layout({ children, pageProps }) {
     <main>
       <ModalDownloadApp />
       <Navbar menus={pageProps?.menus || []} />
-      <div className="m-auto container__screen flex flex-col min-h-screen">
+      <div className="m-auto container__screen flex flex-col min-h-screen z-80">
         {/* <div className="h-16 w-full"></div> */}
         <div className="w-full flex-grow mt-16">{children}</div>
         <Footer />
