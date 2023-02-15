@@ -1,0 +1,53 @@
+.mySwiper {
+  .action__swiper__league {
+    width: 100px;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    z-index: 20;
+    transition: transform 0s ease-out;
+  }
+  .prev__swiper__league {
+    transform: translateX(-100px);
+  }
+  .swiper__custom_league {
+    max-width: 100%;
+    display: flex;
+    .slide__custom {
+      flex-shrink: 0;
+    }
+    transition: transform 0.3s;
+  }
+  .next__swiper__league {
+    transform: translateX(100px);
+  }
+  .swiper-button-next {
+    margin-right: 20px;
+    background-image: url("../public/nextIcon.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 20px;
+    height: 30px;
+  }
+  .swiper-button-prev {
+    margin-left: 20px;
+    background-image: url("../public/preIcon.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 20px;
+    height: 30px;
+  }
+
+  .swiper-button-prev::after {
+    display: none;
+  }
+  .swiper-button-next::after {
+    display: none;
+  }
+  .swiper-button-disabled {
+    display: none;
+    background: none;
+  }
+}

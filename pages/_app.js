@@ -1,6 +1,7 @@
 import "assets/main.css"
 import "assets/base.scss"
 import "assets/index.css"
+import "assets/swiper.scss"
 import { Head } from "components/common"
 import NextNprogress from "nextjs-progressbar"
 const Noop = ({ children }) => <>{children}</>
