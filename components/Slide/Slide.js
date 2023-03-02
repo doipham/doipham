@@ -13,6 +13,7 @@ import { getAccessToken } from "lib/Cookies"
 import TagPremium from "components/TagPremium"
 import cn from "classnames"
 export default function Slide({ slides }) {
+  console.log(slides, " hien thi slidessss")
   const router = useRouter()
   const { togleModalLogin, setModalLive } = useStore()
   const isMonter = useRef(false)
@@ -127,7 +128,7 @@ export default function Slide({ slides }) {
         modules={[Navigation, Autoplay]}
         centeredSlides={true}
         autoplay={{
-          delay: 700000,
+          delay: 5000,
           disableOnInteraction: false
         }}
         className="mySwiper"
@@ -157,9 +158,16 @@ export default function Slide({ slides }) {
                   )}
                 >
                   <div className="mb-20">
-                    <div className="text-blue-600 font-semibold text-60">SẢN PHẨM MỚI</div>
-                    <div>Cùng hàng loạt mẫu thiết kế</div>
-                    <div> xem ngay</div>
+                    <div className="text-blue-600 font-semibold text-60">{params?.name}</div>
+                    <div className="font-semibold text-28 mb-4">{params?.sub}</div>
+                    <div
+                      className="rounded-full bg-primary-hover w-32 text-center px-2 py-2 font-medium text-white cursor-pointer shadow"
+                      onClick={(id) => {
+                        console.log(id, " hien thi id")
+                      }}
+                    >
+                      xem ngay
+                    </div>
                   </div>
                 </div>
               </div>

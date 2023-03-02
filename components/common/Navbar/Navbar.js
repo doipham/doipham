@@ -34,6 +34,7 @@ export default function Navbar() {
   const [isBlack, setBlack] = useState(false)
   const isMounter = useRef()
   const [isMobile, setIsMobile] = useState(false)
+  const [showMenu, setShowMenu] = useState(false)
 
   useEffect(() => {
     if (process.browser) {
@@ -59,7 +60,7 @@ export default function Navbar() {
   }, [router])
 
   useEffect(() => {
-    if (window.innerWidth < 767 && window.location.pathname === "/chart-rankings") {
+    if (window.innerWidth < 767) {
       setIsMobile(true)
     } else {
       setIsMobile(false)
@@ -146,18 +147,48 @@ export default function Navbar() {
         </nav>
       )}
       {isMobile === true && (
-        <nav
-          className={cn(
-            s.nav,
-            isBlack ? s.black : s.white,
-            "px-4 top-0 text-white w-full fixed z-30 border-b border-dark-500"
-          )}
-        >
-          <div className="container__screen m-auto w-full justify-between items-center h-14">
-            <div className="flex relative items-center h-14">{icLogo}</div>
+        <nav className="px-4 top-0 text-black w-full fixed z-[102] justify-between items-center flex">
+          {/* <div className="container__screen m-auto w-full justify-between items-center h-[54px]"> */}
+          <div className="flex relative items-center h-14">
+            <Image
+              width={40}
+              height={40}
+              src="https://dayve.vn/wp-content/uploads/2022/04/cach-ve-hoa-dam-but-buoc-7.png"
+              alt="image"
+            />
           </div>
+          <div
+            className=""
+            onClick={() => {
+              setShowMenu(!showMenu)
+            }}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
+              />
+            </svg>
+          </div>
+
+          {/* </div> */}
         </nav>
       )}
+      <div className={`menu ${!showMenu ? "open" : ""}`}>
+        <ul>
+          <li>Menu Item 1</li>
+          <li>Menu Item 2</li>
+          <li>Menu Item 3</li>
+        </ul>
+      </div>
     </div>
   )
 }

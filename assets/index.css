@@ -9,3 +9,53 @@
   padding: 0px;
   border: 0px;
 }
+.menu {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  color: #fff;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  transition: transform 0.3s ease-in-out;
+  z-index: 30;
+}
+.menu.open {
+  left: 0;
+  transform: translateX(100%);
+}
+
+.menu ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.menu l i {
+  margin: 10px;
+  font-size: 24px;
+}
+
+.menu button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 24px;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.menu.open button {
+  color: #333;
+}
+
+.menu.open ul {
+  transform: translateX(-100%);
+}

@@ -5,7 +5,7 @@ const ModalDownloadApp = dynamic(() => import("components/ModalDownloadApp"))
 export default function Layout({ children, pageProps }) {
   return (
     <main>
-      <ModalDownloadApp />
+      {/* <ModalDownloadApp /> */}
       <Navbar menus={pageProps?.menus || []} />
       <div className="m-auto container__screen flex flex-col min-h-screen z-80">
         {/* <div className="h-16 w-full"></div> */}

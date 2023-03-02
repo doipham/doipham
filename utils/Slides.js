@@ -7,7 +7,7 @@ export const Slides = [
     link: "",
     type_link: 1,
     sport_type: 1,
-    position_text: "left"
+    position_text: "right"
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ export const Slides = [
     link: "",
     type_link: 1,
     sport_type: 1,
-    position_text: "right"
+    position_text: "left"
   },
   {
     id: 3,
@@ -37,6 +37,6 @@ export const Slides = [
     link: "",
     type_link: 1,
     sport_type: 1,
-    position_text: "right"
+    position_text: "left"
   }
 ]

@@ -13,7 +13,7 @@ module.exports = {
     backgroundColor: (theme) => ({
       ...theme("colors"),
       ["primary-100"]: "#CCE2FF",
-      ["primary-300"]: "#66A7FF",
+      ["primary-300"]: "#3949ab",
       ["primary-500"]: "#52B5F9",
       ["primary-700"]: "#0057CC",
       ["primary-hover"]: "#1287DE",
@@ -32,7 +32,7 @@ module.exports = {
     textColor: (theme) => ({
       ...theme("colors"),
       ["primary-100"]: "rgba(255, 255, 255, 0.87)",
-      ["primary-300"]: "rgba(255, 255, 255, 0.6)",
+      ["primary-300"]: "#3949ab",
       ["primary-400"]: "rgb(0, 152, 217, 10%)",
       ["primary-500"]: "#52B5F9",
       ["primary-700"]: "rgba(255, 255, 255, 0.16)",

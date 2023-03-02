@@ -1,0 +1,6 @@
+export { default as Card3x1 } from "./Card3x1"
+export { default as Card3x4 } from "./Card3x4"
+export { default as Card48x60 } from "./Card4.8x6"
+export { default as Card4x1 } from "./Card4x1"
+export { default as Card4x4 } from "./Card4x4"
+export { default as Card16x9 } from "./Card16x9"
