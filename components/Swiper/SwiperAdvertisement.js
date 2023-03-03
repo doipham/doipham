@@ -1,8 +1,6 @@
 import React, { memo } from "react"
 import { CardVod } from "components/Card"
 import Link from "next/link"
-import TypeEvent from "utils/TypeEvent"
-import DisplayTypeScreenBlock from "utils/DisplayTypeScreenBlock"
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
 import "swiper/css/pagination"
